@@ -91,6 +91,7 @@ Group.new("StatusLineNC", c.black, c.black, s.none)
 Group.new("Visual", c.blue, c.base, s.none)
 Group.new("VisualNOS", c.blue, c.base, s.none)
 Group.new("WildMenu", c.pink, c.base, s.none)
+Group.new("qffilename", g.Title, g.Title, g.Title)
 
 -- spelling problesm are shown!
 Group.new("SpellBad", c.red, c.none, s.undercurl)
@@ -211,3 +212,5 @@ Group.link("fugitiveStagedHeading", g.Warning)
 Group.link("fugitiveUntrackedHeading", g.Macro)
 Group.link("fugitiveUntrackedSection", g.Noise)
 Group.link("fugitiveUntrackedModifier", g.Noise)
+Group.new("diffadded", c.none, c.green, s.none)
+Group.new("diffremoved", c.none, c.red_light, s.none)
