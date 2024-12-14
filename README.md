@@ -22,6 +22,14 @@ Based on [tjdevries/colorbuddy.nvim](https://github.com/tjdevries/colorbuddy.nvi
 },
 ```
 
+## Supported Plugins
+
+- diagnostics,
+- [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter),
+- [lewis6991/gitsigns.nvim: Git integration for buffers](https://github.com/lewis6991/gitsigns.nvim),
+- [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim),
+- [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive).
+
 ## Examples
 
 You can find them in [wiki](https://github.com/IlyasYOY/theme.nvim/wiki/Example).
