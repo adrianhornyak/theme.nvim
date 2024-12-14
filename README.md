@@ -1,3 +1,19 @@
+# Installation
+
+[lazy.nvim](https://github.com/folke/lazy.nvim)
+
+```lua
+{
+    "IlyasYOY/theme.nvim",
+    dependencies = "tjdevries/colorbuddy.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+        vim.cmd.colorscheme("ilyasyoy")
+    end,
+},
+```
+
 # theme.nvim
 
 Neovim Theme convenient for me.
