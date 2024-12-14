@@ -15,17 +15,16 @@ local palette = {
 
     { keys = { "orange" }, gui = "#d7875f" },
     { keys = { "brown" }, gui = "#af875f" },
+    { keys = { "brown_deep" }, gui = "#875f5f" },
 
     { keys = { "green_deep" }, gui = "#5f875f" },
     { keys = { "green" }, gui = "#49503b" },
     { keys = { "green_light" }, gui = "#87af87" },
 
-    { keys = { "blue_toxic" }, gui = "#87afd7" },
     { keys = { "blue" }, gui = "#5f87af" },
     { keys = { "blue_dark" }, gui = "#3b4050" },
 
     { keys = { "pink" }, gui = "#d787af" },
-    { keys = { "pink_deep" }, gui = "#875f5f" },
     { keys = { "purple" }, gui = "#8787af" },
 
     -- Grayscale
@@ -53,44 +52,44 @@ Group.new("Noise", c.dark, c.none, s.none)
 -- Basic groups
 Group.new("Comment", c.dark, c.none, s.none)
 Group.new("Normal", c.white, c.none, s.none)
-Group.new("NonText", c.darkest, c.none, s.none)
 
+Group.new("NonText", c.darkest, c.none, s.none)
 Group.new("Error", c.red, c.none, s.none)
 Group.new("Number", c.green_light, c.none, s.none)
 Group.new("Special", c.purple, c.none, s.none)
 Group.new("String", c.green_deep, c.none, s.none)
-Group.new("Title", c.blue_toxic, c.none, s.none)
+Group.new("Title", c.blue, c.none, s.none)
 Group.new("Todo", c.pink, c.none, s.none)
 Group.new("Warning", c.orange, c.none, s.none)
 
 -- https://neovim.io/doc/user/syntax.html#hl-User1
 Group.new("User1", c.brown, c.none, s.none)
 Group.new("User2", c.blue, c.none, s.none)
-Group.new("User3", c.pink_deep, c.none, s.none)
+Group.new("User3", c.brown_deep, c.none, s.none)
 
 -- diff
-Group.new("Added", c.green_deep, c.none, s.none)
-Group.new("Changed", c.brown, c.none, s.none)
-Group.new("Removed", c.pink_deep, c.none, s.none)
-Group.new("DiffAdd", c.none, c.green, s.none)
-Group.new("DiffChange", c.none, c.blue_dark, s.none)
-Group.new("DiffDelete", c.none, c.red_light, s.none)
-Group.new("DiffLine", c.none, c.none, s.underline)
-Group.new("DiffText", c.none, c.green, s.none)
+Group.new("Added", g.Normal, c.green, s.none)
+Group.new("Changed", g.Normal, c.blue_dark, s.none)
+Group.new("Removed", g.Normal, c.red_light, s.none)
 
 -- search and highlight stuff
+Group.new("MatchParen", c.Normal, c.none, s.underline)
+
 Group.new("CurSearch", c.pink, c.none, s.underline)
-Group.new("IncSearch", c.pink, c.none, s.underline)
-Group.new("MatchParen", c.blue_toxic, c.none, s.none)
+Group.new("IncSearch", c.pink, c.none, s.none)
+Group.new("Search", c.pink, c.none, s.none)
+
 Group.new("Pmenu", c.darker, c.black, s.none)
 Group.new("PmenuSel", c.grey, c.black, s.none)
 Group.new("PmenuThumb", c.brown, c.black, s.none) -- not sure what this is
-Group.new("Search", c.pink, c.none, s.underline)
+Group.new("WildMenu", c.pink, c.base, s.none)
+
 Group.new("StatusLine", c.none, c.base, s.none)
 Group.new("StatusLineNC", c.black, c.black, s.none)
+
 Group.new("Visual", c.blue, c.base, s.none)
 Group.new("VisualNOS", c.blue, c.base, s.none)
-Group.new("WildMenu", c.pink, c.base, s.none)
+
 Group.new("qffilename", g.Title, g.Title, g.Title)
 
 -- spelling problesm are shown!
@@ -100,7 +99,7 @@ Group.new("SpellLocal", c.brown, c.none, s.undercurl)
 Group.new("SpellRare", c.blue, c.none, s.undercurl)
 
 -- LINKS
-Group.new("Constant", g.Normal, g.Normal, g.Normal + s.italic)
+Group.link("Constant", g.Normal)
 Group.link("Boolean", g.Number)
 Group.link("Character", g.Number)
 Group.link("Conditional", g.Normal)
