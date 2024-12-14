@@ -1,6 +1,14 @@
-# Installation
+# theme.nvim
 
-[lazy.nvim](https://github.com/folke/lazy.nvim)
+Neovim Theme convenient for me.
+
+A fork of: [redbug312/cactusbuddy](https://github.com/redbug312/cactusbuddy).
+
+Based on [tjdevries/colorbuddy.nvim](https://github.com/tjdevries/colorbuddy.nvim).
+
+## Installation
+
+- [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ```lua
 {
@@ -13,14 +21,6 @@
     end,
 },
 ```
-
-# theme.nvim
-
-Neovim Theme convenient for me.
-
-A fork of: [redbug312/cactusbuddy](https://github.com/redbug312/cactusbuddy).
-
-Based on [tjdevries/colorbuddy.nvim](https://github.com/tjdevries/colorbuddy.nvim).
 
 ## Examples
 
