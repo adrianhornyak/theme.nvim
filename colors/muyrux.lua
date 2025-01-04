@@ -34,7 +34,7 @@ local palette = {
 	{ keys = { "dark" }, gui = "#767676" },
 	{ keys = { "darker" }, gui = "#585858" },
 	{ keys = { "darkest" }, gui = "#444444" },
-	{ keys = { "base" }, gui = "#262626" },
+	{ keys = { "base" }, gui = "#ffffff" },
 	{ keys = { "black" }, gui = "#1c1c1c" },
 }
 
