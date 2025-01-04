@@ -65,9 +65,9 @@ Group.new("Todo", c.pink, c.none, s.none)
 Group.new("Warning", c.orange, c.none, s.none)
 
 -- https://neovim.io/doc/user/syntax.html#hl-User1
-Group.new("User1", c.brown, c.none, s.none)
+Group.new("User1", c.pink, c.none, s.none)
 Group.new("User2", c.blue, c.none, s.none)
-Group.new("User3", c.brown_deep, c.none, s.none)
+Group.new("User3", c.pink, c.none, s.none)
 
 -- diff
 Group.new("Added", g.Normal, c.green, s.none)
