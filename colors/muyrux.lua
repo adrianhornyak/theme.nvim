@@ -80,13 +80,13 @@ Group.new("CurSearch", c.pink, c.none, s.underline)
 Group.new("IncSearch", c.pink, c.none, s.none)
 Group.new("Search", c.pink, c.none, s.none)
 
-Group.new("Pmenu", c.darker, c.black, s.none)
-Group.new("PmenuSel", c.grey, c.black, s.none)
-Group.new("PmenuThumb", c.brown, c.black, s.none) -- not sure what this is
+Group.new("Pmenu", c.darker, c.white, s.none)
+Group.new("PmenuSel", c.grey, c.white, s.none)
+Group.new("PmenuThumb", c.brown, c.white, s.none) -- not sure what this is
 Group.new("WildMenu", c.pink, c.base, s.none)
 
 Group.new("StatusLine", c.none, c.base, s.none)
-Group.new("StatusLineNC", c.black, c.black, s.none)
+Group.new("StatusLineNC", c.black, c.white, s.none)
 
 Group.new("Visual", c.blue, c.base, s.none)
 Group.new("VisualNOS", c.blue, c.base, s.none)
