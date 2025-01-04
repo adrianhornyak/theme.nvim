@@ -12,12 +12,12 @@ Based on [tjdevries/colorbuddy.nvim](https://github.com/tjdevries/colorbuddy.nvi
 
 ```lua
 {
-    "IlyasYOY/theme.nvim",
+    "adrianhornyak/theme.nvim",
     dependencies = "tjdevries/colorbuddy.nvim",
     lazy = false,
     priority = 1000,
     config = function()
-        vim.cmd.colorscheme("ilyasyoy")
+        vim.cmd.colorscheme("muyrux")
     end,
 },
 ```

@@ -1,6 +1,6 @@
-require("colorbuddy").colorscheme("ilyasyoy")
+require("colorbuddy").colorscheme("muyrux")
 
-local colorbuddy = require "colorbuddy"
+local colorbuddy = require("colorbuddy")
 
 local Color = colorbuddy.Color
 local Group = colorbuddy.Group
@@ -10,37 +10,37 @@ local s = colorbuddy.styles
 
 -- setup colors
 local palette = {
-    { keys = { "red_light" }, gui = "#722529" },
-    { keys = { "red" }, gui = "#d75f5f" },
+	{ keys = { "red_light" }, gui = "#722529" },
+	{ keys = { "red" }, gui = "#d75f5f" },
 
-    { keys = { "orange" }, gui = "#d7875f" },
-    { keys = { "brown" }, gui = "#af875f" },
-    { keys = { "brown_deep" }, gui = "#875f5f" },
+	{ keys = { "orange" }, gui = "#d7875f" },
+	{ keys = { "brown" }, gui = "#af875f" },
+	{ keys = { "brown_deep" }, gui = "#875f5f" },
 
-    { keys = { "green_deep" }, gui = "#5f875f" },
-    { keys = { "green" }, gui = "#49503b" },
-    { keys = { "green_light" }, gui = "#87af87" },
+	{ keys = { "green_deep" }, gui = "#5f875f" },
+	{ keys = { "green" }, gui = "#49503b" },
+	{ keys = { "green_light" }, gui = "#87af87" },
 
-    { keys = { "blue" }, gui = "#5f87af" },
-    { keys = { "blue_dark" }, gui = "#3b4050" },
+	{ keys = { "blue" }, gui = "#5f87af" },
+	{ keys = { "blue_dark" }, gui = "#3b4050" },
 
-    { keys = { "pink" }, gui = "#d787af" },
-    { keys = { "purple" }, gui = "#8787af" },
+	{ keys = { "pink" }, gui = "#d787af" },
+	{ keys = { "purple" }, gui = "#8787af" },
 
-    -- Grayscale
-    { keys = { "white" }, gui = "#bcbcbc" },
-    { keys = { "grey" }, gui = "#949494" },
-    { keys = { "dark" }, gui = "#767676" },
-    { keys = { "darker" }, gui = "#585858" },
-    { keys = { "darkest" }, gui = "#444444" },
-    { keys = { "base" }, gui = "#262626" },
-    { keys = { "black" }, gui = "#1c1c1c" },
+	-- Grayscale
+	{ keys = { "white" }, gui = "#bcbcbc" },
+	{ keys = { "grey" }, gui = "#949494" },
+	{ keys = { "dark" }, gui = "#767676" },
+	{ keys = { "darker" }, gui = "#585858" },
+	{ keys = { "darkest" }, gui = "#444444" },
+	{ keys = { "base" }, gui = "#262626" },
+	{ keys = { "black" }, gui = "#1c1c1c" },
 }
 
 for _, value in ipairs(palette) do
-    for _, key in ipairs(value.keys) do
-        Color.new(key, value.gui)
-    end
+	for _, key in ipairs(value.keys) do
+		Color.new(key, value.gui)
+	end
 end
 
 -- EDITOR BASICS
@@ -167,20 +167,8 @@ Group.link("NvimInternalError", g.Error)
 Group.link("FloatBorder", g.NonText)
 
 -- Diagnostics
-Group.new(
-    "DiagnosticUnderlineError",
-    c.none,
-    c.none,
-    s.underline,
-    c.red
-)
-Group.new(
-    "DiagnosticUnderlineWarn",
-    c.none,
-    c.none,
-    s.underline,
-    c.orange
-)
+Group.new("DiagnosticUnderlineError", c.none, c.none, s.underline, c.red)
+Group.new("DiagnosticUnderlineWarn", c.none, c.none, s.underline, c.orange)
 Group.new("DiagnosticUnderlineHint", c.none, c.none, s.underline)
 Group.new("DiagnosticUnderlineInfo", c.none, c.none, s.underline)
 Group.link("DiagnosticError", g.Error)
