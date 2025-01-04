@@ -55,7 +55,7 @@ Group.new("Noise", c.dark, c.none, s.none)
 Group.new("Comment", c.dark, c.white, s.none)
 Group.new("Normal", c.black, c.white, s.none)
 
-Group.new("NonText", c.darkest, c.none, s.none)
+Group.new("NonText", c.pink, c.none, s.none)
 Group.new("Error", c.red, c.none, s.none)
 Group.new("Number", c.green_light, c.none, s.none)
 Group.new("Special", c.purple, c.none, s.none)
