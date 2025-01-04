@@ -17,13 +17,13 @@ local palette = {
 	{ keys = { "brown" }, gui = "#af875f" },
 	{ keys = { "brown_deep" }, gui = "#875f5f" },
 
-	{ keys = { "green_deep" }, gui = "#1abc9c " },
+	{ keys = { "green_deep" }, gui = "#1abc9c" },
 	{ keys = { "green" }, gui = "#49503b" },
 	{ keys = { "green_light" }, gui = "#9ece6a" },
 
-	{ keys = { "blue_light" }, gui = "#89ddff  " },
-	{ keys = { "blue" }, gui = "#7dcfff " },
-	{ keys = { "blue_dark" }, gui = "#2ac3de " },
+	{ keys = { "blue_light" }, gui = "#89ddff" },
+	{ keys = { "blue" }, gui = "#7dcfff" },
+	{ keys = { "blue_dark" }, gui = "#2ac3de" },
 
 	{ keys = { "pink" }, gui = "#EE5396" },
 	{ keys = { "purple" }, gui = "#bb9af7" },
