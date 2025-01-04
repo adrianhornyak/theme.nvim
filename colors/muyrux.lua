@@ -49,7 +49,7 @@ end
 -- https://neovim.io/doc/user/syntax.html#group-name
 
 -- Custom groups
-Group.new("Noise", c.dark, c.none, s.none)
+Group.new("Noise", c.pink, c.none, s.none)
 
 -- Basic groups
 Group.new("Comment", c.dark, c.white, s.none)
