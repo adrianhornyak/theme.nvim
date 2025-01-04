@@ -28,7 +28,8 @@ local palette = {
 	{ keys = { "purple" }, gui = "#8787af" },
 
 	-- Grayscale
-	{ keys = { "white" }, gui = "#bcbcbc" },
+	{ keys = { "white" }, gui = "#ffffff" },
+	{ keys = { "light_grey" }, gui = "#bcbcbc" },
 	{ keys = { "grey" }, gui = "#949494" },
 	{ keys = { "dark" }, gui = "#767676" },
 	{ keys = { "darker" }, gui = "#585858" },
@@ -50,7 +51,7 @@ end
 Group.new("Noise", c.dark, c.none, s.none)
 
 -- Basic groups
-Group.new("Comment", c.dark, c.none, s.none)
+Group.new("Comment", c.dark, c.white, s.none)
 Group.new("Normal", c.black, c.white, s.none)
 
 Group.new("NonText", c.darkest, c.none, s.none)
