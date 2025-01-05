@@ -49,15 +49,15 @@ end
 -- https://neovim.io/doc/user/syntax.html#group-name
 
 -- Custom groups
-Group.new("Noise", c.pink, c.none, s.none)
+Group.new("Noise", c.light_grey, c.none, s.none)
 
 -- Basic groups
 Group.new("Comment", c.dark, c.white, s.none)
 Group.new("Normal", c.black, c.white, s.none)
 
-Group.new("NonText", c.pink, c.none, s.none)
+Group.new("NonText", c.dark, c.none, s.none)
 Group.new("Error", c.red, c.none, s.none)
-Group.new("Number", c.green_light, c.none, s.none)
+Group.new("Number", c.orange, c.none, s.none)
 Group.new("Special", c.purple, c.none, s.none)
 Group.new("String", c.green_deep, c.none, s.none)
 Group.new("Title", c.blue, c.none, s.none)
