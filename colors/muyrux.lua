@@ -94,6 +94,10 @@ Group.new("VisualNOS", c.blue, c.base, s.none)
 
 Group.new("qffilename", g.Title, g.Title, g.Title)
 
+Group.new("CursorLineNr", c.pink, c.none, s.none)
+Group.new("EndOfBuffer", c.pink, c.none, s.none)
+Group.new("LineNr", c.pink, c.none, s.none)
+
 -- spelling problesm are shown!
 Group.new("SpellBad", c.red, c.none, s.undercurl)
 Group.new("SpellCap", c.orange, c.none, s.undercurl)
