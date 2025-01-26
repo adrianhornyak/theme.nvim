@@ -190,6 +190,13 @@ Group.link("TelescopeMatching", g.User1)
 Group.link("TelescopePromptCounter", g.Noise)
 
 -- NvimTree
+Group.link("highlight NvimTreeGitDirty", g.orange)
+Group.link("highlight NvimTreeGitNew", g.green_deep)
+Group.link("highlight NvimTreeGitDeleted", g.red)
+Group.link("highlight NvimTreeGitStaged", g.blue)
+Group.link("highlight NvimTreeGitMerge", g.purple)
+Group.link("highlight NvimTreeGitRenamed", g.blue_dark)
+Group.link("highlight NvimTreeGitIgnored", g.light_grey)
 
 -- Markdown
 Group.link("@markup.list.unchecked.markdown", g.Error)
