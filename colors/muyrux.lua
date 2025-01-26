@@ -13,7 +13,7 @@ local palette = {
 	{ keys = { "red_light" }, gui = "#722529" },
 	{ keys = { "red" }, gui = "#d75f5f" },
 
-	{ keys = { "orange" }, gui = "#d7875f" },
+	{ keys = { "orange" }, gui = "#ff9e64" },
 	{ keys = { "brown" }, gui = "#af875f" },
 	{ keys = { "brown_deep" }, gui = "#875f5f" },
 
@@ -188,6 +188,9 @@ Group.new("GitSignsDelete", c.red, c.none, s.none)
 Group.link("TelescopeBorder", g.Noise)
 Group.link("TelescopeMatching", g.User1)
 Group.link("TelescopePromptCounter", g.Noise)
+
+-- NvimTree
+Group.link("NvimTreeGitNewIcon", g.green_deep)
 
 -- Markdown
 Group.link("@markup.list.unchecked.markdown", g.Error)
