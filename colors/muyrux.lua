@@ -190,7 +190,6 @@ Group.link("TelescopeMatching", g.User1)
 Group.link("TelescopePromptCounter", g.Noise)
 
 -- NvimTree
-Group.link("NvimTreeGitNewIcon", g.green_deep)
 
 -- Markdown
 Group.link("@markup.list.unchecked.markdown", g.Error)
