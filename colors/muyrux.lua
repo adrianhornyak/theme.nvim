@@ -192,6 +192,9 @@ Group.new("NvimTreeGitNewIcon", c.green_deep, c.none, s.none)
 Group.new("NvimTreeGitFileNewHL", c.Normal, c.none, s.none)
 Group.new("NvimTreeGitFolderNewHL", c.Normal, c.none, s.none)
 -- merged
+Group.new("NvimTreeGitMerge", c.purple, c.none, s.none)
+Group.new("NvimTreeGitFileMergeHL", c.Normal, c.none, s.none)
+Group.new("NvimTreeGitFolderMergeHL", c.Normal, c.none, s.none)
 -- dirty
 Group.new("NvimTreeGitDirtyIcon", c.orange, c.none, s.none)
 Group.new("NvimTreeGitFileDirtyHL", c.Normal, c.none, s.none)
