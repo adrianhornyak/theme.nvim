@@ -188,6 +188,7 @@ Group.new("GitSignsDelete", c.red, c.none, s.none)
 
 
 Group.link("NvimTreeOpenedFolderName", g.Special)
+Group.link("NvimTreeFolderIcon", g.)
 Group.link("NvimTreeFolderName", g.Normal)
 
 Group.link("NvimTreeGitDirty", g.Warning)
@@ -198,12 +199,12 @@ Group.link("NvimTreeGitNew", g.String)
 Group.link("NvimTreeGitDeleted", g.Error)
 Group.link("NvimTreeGitIgnored", g.Comment) -- Telescope
 
-Group.link("NvimTreeGitDirtyFolderHL", g.Normal)
-Group.link("NvimTreeGitStagedFolderHL", g.Normal)
-Group.link("NvimTreeGitMergeFolderHL", g.Normal)
-Group.link("NvimTreeGitRenamedFolderHL", g.Normal)
-Group.link("NvimTreeGitNewFolderHL", g.Normal)
-Group.link("NvimTreeGitDeletedFolderHL", g.Normal)
+Group.link("NvimTreeGitFolderDirtyHL", g.Normal)
+Group.link("NvimTreeGitFolderStagedHL", g.Normal)
+Group.link("NvimTreeGitFolderMergeHL", g.Normal)
+Group.link("NvimTreeGitFolderRenamedHL", g.Normal)
+Group.link("NvimTreeGitFolderNewHL", g.Normal)
+Group.link("NvimTreeGitFolderDeletedHL", g.Normal)
 
 -- Telescope
 Group.link("TelescopeBorder", g.Noise)
