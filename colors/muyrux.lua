@@ -185,22 +185,22 @@ Group.new("GitSignsChange", c.orange, c.none, s.none)
 Group.new("GitSignsDelete", c.red, c.none, s.none)
 
 -- NvimTree & NvimTree Git
-Group.new("NvimTreeFolderIcon", c.purple, c.none, s.none)
-Group.new("NvimTreeFolderName", g.Normal, c.none, s.none)
+Group.link("NvimTreeFolderIcon", c.purple)
+Group.link("NvimTreeFolderName", g.Normal)
 -- added
-Group.new("NvimTreeGitFileNewHL", g.Normal, c.none, s.none)
+Group.link("NvimTreeGitFileNewHL", g.Normal)
 -- merged
-Group.new("NvimTreeGitFileMergeHL", g.Normal, c.none, s.none)
+Group.link("NvimTreeGitFileMergeHL", g.Normal)
 -- dirty
-Group.new("NvimTreeGitFileDirtyHL", g.Normal, c.none, s.none)
+Group.link("NvimTreeGitFileDirtyHL", g.Normal)
 -- staged
-Group.new("NvimTreeGitFileStagedHL", g.Normal, c.none, s.none)
+Group.link("NvimTreeGitFileStagedHL", g.Normal)
 -- renamed
-Group.new("NvimTreeGitFileRenamedHL", g.Normal, c.none, s.none)
+Group.link("NvimTreeGitFileRenamedHL", g.Normal)
 -- deleted
-Group.new("NvimTreeGitFileDeletedHL", g.Normal, c.none, s.none)
+Group.link("NvimTreeGitFileDeletedHL", g.Normal)
 
-Group.new("NvimTreeGitIgnored", c.light_grey, c.none, s.none)
+Group.link("NvimTreeGitIgnored", c.light_grey)
 
 -- Telescope
 Group.link("TelescopeBorder", g.Noise)
