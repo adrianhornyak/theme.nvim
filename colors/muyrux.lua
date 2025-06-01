@@ -199,6 +199,13 @@ Group.link("NvimTreeGitNew", g.String)
 Group.link("NvimTreeGitDeleted", g.Error)
 Group.link("NvimTreeGitIgnored", g.Comment) -- Telescope
 
+Group.link("NvimTreeGitDirtyIcon", g.Warning)
+Group.link("NvimTreeGitStagedIcon", g.TypeDef)
+Group.link("NvimTreeGitMergeIcon", g.Error)
+Group.link("NvimTreeGitRenamedIcon", g.Changed)
+Group.link("NvimTreeGitNewIcon", g.String)
+Group.link("NvimTreeGitDeletedIcon", g.Error)
+
 Group.link("NvimTreeGitFolderDirtyHL", g.Normal)
 Group.link("NvimTreeGitFolderStagedHL", g.Normal)
 Group.link("NvimTreeGitFolderMergeHL", g.Normal)
