@@ -190,27 +190,21 @@ Group.new("NvimTreeFolderName", c.Normal, c.none, s.none)
 -- added
 Group.new("NvimTreeGitNew", c.green_deep, c.none, s.none)
 Group.new("NvimTreeGitFileNewHL", c.Normal, c.none, s.none)
-Group.new("NvimTreeGitFolderNewHL", c.Normal, c.none, s.none)
 -- merged
 Group.new("NvimTreeGitMerge", c.purple, c.none, s.none)
 Group.new("NvimTreeGitFileMergeHL", c.Normal, c.none, s.none)
-Group.new("NvimTreeGitFolderMergeHL", c.Normal, c.none, s.none)
 -- dirty
 Group.new("NvimTreeGitDirty", c.orange, c.none, s.none)
 Group.new("NvimTreeGitFileDirtyHL", c.Normal, c.none, s.none)
-Group.new("NvimTreeGitFolderDirtyHL", c.Normal, c.none, s.none)
 -- staged
 Group.new("NvimTreeGitStaged", c.blue, c.none, s.none)
 Group.new("NvimTreeGitFileStagedHL", c.Normal, c.none, s.none)
-Group.new("NvimTreeGitFolderStagedHL", c.Normal, c.none, s.none)
 -- renamed
 Group.new("NvimTreeGitRenamed", c.blue_dark, c.none, s.none)
 Group.new("NvimTreeGitFileRenamedHL", c.Normal, c.none, s.none)
-Group.new("NvimTreeGitFolderRenamedHL", c.Normal, c.none, s.none)
 -- deleted
 Group.new("NvimTreeGitDeleted", c.red, c.none, s.none)
 Group.new("NvimTreeGitFileDeletedHL", c.Normal, c.none, s.none)
-Group.new("NvimTreeGitFolderDeletedHL", c.Normal, c.none, s.none)
 
 Group.new("NvimTreeGitIgnored", c.light_grey, c.none, s.none)
 
