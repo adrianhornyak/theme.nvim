@@ -186,7 +186,7 @@ Group.new("GitSignsDelete", c.red, c.none, s.none)
 
 -- NvimTree & NvimTree Git
 Group.new("NvimTreeFolderIcon", c.purple, c.none, s.none)
-Group.new("NvimTreeFolderName", c.Normal, c.none, s.none)
+-- Group.new("NvimTreeFolderName", c.Normal, c.none, s.none)
 -- added
 Group.new("NvimTreeGitNew", c.green_deep, c.none, s.none)
 Group.new("NvimTreeGitFileNewHL", c.Normal, c.none, s.none)
