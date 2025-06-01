@@ -1,3 +1,5 @@
+require("colorbuddy").colorscheme("muyrux")
+
 local colorbuddy = require("colorbuddy")
 
 local Color = colorbuddy.Color
@@ -183,22 +185,22 @@ Group.new("GitSignsChange", c.orange, c.none, s.none)
 Group.new("GitSignsDelete", c.red, c.none, s.none)
 
 -- NvimTree & NvimTree Git
-Group.link("NvimTreeFolderIcon", c.purple)
-Group.link("NvimTreeFolderName", g.Normal)
+Group.new("NvimTreeFolderIcon", c.purple, c.none, s.none)
+Group.new("NvimTreeFolderName", g.Normal, c.none, s.none)
 -- added
-Group.link("NvimTreeGitFileNewHL", g.Normal)
+Group.new("NvimTreeGitFileNewHL", g.Normal, c.none, s.none)
 -- merged
-Group.link("NvimTreeGitFileMergeHL", g.Normal)
+Group.new("NvimTreeGitFileMergeHL", g.Normal, c.none, s.none)
 -- dirty
-Group.link("NvimTreeGitFileDirtyHL", g.Normal)
+Group.new("NvimTreeGitFileDirtyHL", g.Normal, c.none, s.none)
 -- staged
-Group.link("NvimTreeGitFileStagedHL", g.Normal)
+Group.new("NvimTreeGitFileStagedHL", g.Normal, c.none, s.none)
 -- renamed
-Group.link("NvimTreeGitFileRenamedHL", g.Normal)
+Group.new("NvimTreeGitFileRenamedHL", g.Normal, c.none, s.none)
 -- deleted
-Group.link("NvimTreeGitFileDeletedHL", g.Normal)
+Group.new("NvimTreeGitFileDeletedHL", g.Normal, c.none, s.none)
 
-Group.link("NvimTreeGitIgnored", c.light_grey)
+Group.new("NvimTreeGitIgnored", c.light_grey, c.none, s.none)
 
 -- Telescope
 Group.link("TelescopeBorder", g.Noise)
@@ -219,5 +221,3 @@ Group.link("fugitiveUntrackedSection", g.Noise)
 Group.link("fugitiveUntrackedModifier", g.Noise)
 Group.new("diffadded", c.none, c.green, s.none)
 Group.new("diffremoved", c.none, c.red_light, s.none)
-
-require("colorbuddy").colorscheme("muyrux")
