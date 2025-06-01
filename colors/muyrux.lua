@@ -75,7 +75,7 @@ Group.new("Changed", g.Normal, c.blue_dark, s.none)
 Group.new("Removed", g.Normal, c.red_light, s.none)
 
 -- search and highlight stuff
-Group.new("MatchParen", c.Normal, c.none, s.underline)
+Group.new("MatchParen", g.Normal, c.none, s.underline)
 
 Group.new("CurSearch", c.pink, c.none, s.underline)
 Group.new("IncSearch", c.pink, c.none, s.none)
@@ -186,25 +186,31 @@ Group.new("GitSignsDelete", c.red, c.none, s.none)
 
 -- NvimTree & NvimTree Git
 Group.new("NvimTreeFolderIcon", c.purple, c.none, s.none)
--- Group.new("NvimTreeFolderName", c.Normal, c.none, s.none)
+Group.new("NvimTreeFolderName", g.Normal, c.none, s.none)
 -- added
-Group.new("NvimTreeGitNew", c.green_deep, c.none, s.none)
-Group.new("NvimTreeGitFileNewHL", c.Normal, c.none, s.none)
+Group.new("NvimTreeGitNewIcon", c.green_deep, c.none, s.none)
+Group.new("NvimTreeGitFileNewHL", g.Normal, c.none, s.none)
+Group.new("NvimTreeGitFolderNewHL", g.Normal, c.none, s.none)
 -- merged
-Group.new("NvimTreeGitMerge", c.purple, c.none, s.none)
-Group.new("NvimTreeGitFileMergeHL", c.Normal, c.none, s.none)
+Group.new("NvimTreeGitMergeIcon", c.purple, c.none, s.none)
+Group.new("NvimTreeGitFileMergeHL", g.Normal, c.none, s.none)
+Group.new("NvimTreeGitFolderMergeHL", g.Normal, c.none, s.none)
 -- dirty
-Group.new("NvimTreeGitDirty", c.orange, c.none, s.none)
-Group.new("NvimTreeGitFileDirtyHL", c.Normal, c.none, s.none)
+Group.new("NvimTreeGitDirtyIcon", c.orange, c.none, s.none)
+Group.new("NvimTreeGitFileDirtyHL", g.Normal, c.none, s.none)
+Group.new("NvimTreeGitFolderDirtyHL", g.Normal, c.none, s.none)
 -- staged
-Group.new("NvimTreeGitStaged", c.blue, c.none, s.none)
-Group.new("NvimTreeGitFileStagedHL", c.Normal, c.none, s.none)
+Group.new("NvimTreeGitStagedIcon", c.blue, c.none, s.none)
+Group.new("NvimTreeGitFileStagedHL", g.Normal, c.none, s.none)
+Group.new("NvimTreeGitFolderStagedHL", g.Normal, c.none, s.none)
 -- renamed
-Group.new("NvimTreeGitRenamed", c.blue_dark, c.none, s.none)
-Group.new("NvimTreeGitFileRenamedHL", c.Normal, c.none, s.none)
+Group.new("NvimTreeGitRenamedIcon", c.blue_dark, c.none, s.none)
+Group.new("NvimTreeGitFileRenamedHL", g.Normal, c.none, s.none)
+Group.new("NvimTreeGitFolderRenamedHL", g.Normal, c.none, s.none)
 -- deleted
-Group.new("NvimTreeGitDeleted", c.red, c.none, s.none)
-Group.new("NvimTreeGitFileDeletedHL", c.Normal, c.none, s.none)
+Group.new("NvimTreeGitDeletedIcon", c.red, c.none, s.none)
+Group.new("NvimTreeGitFileDeletedHL", g.Normal, c.none, s.none)
+Group.new("NvimTreeGitFolderDeletedHL", g.Normal, c.none, s.none)
 
 Group.new("NvimTreeGitIgnored", c.light_grey, c.none, s.none)
 
