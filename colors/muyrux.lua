@@ -1,5 +1,3 @@
-require("colorbuddy").colorscheme("muyrux")
-
 local colorbuddy = require("colorbuddy")
 
 local Color = colorbuddy.Color
@@ -221,3 +219,5 @@ Group.link("fugitiveUntrackedSection", g.Noise)
 Group.link("fugitiveUntrackedModifier", g.Noise)
 Group.new("diffadded", c.none, c.green, s.none)
 Group.new("diffremoved", c.none, c.red_light, s.none)
+
+require("colorbuddy").colorscheme("muyrux")
