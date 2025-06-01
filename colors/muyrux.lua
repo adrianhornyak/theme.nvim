@@ -186,9 +186,8 @@ Group.new("GitSignsDelete", c.red, c.none, s.none)
 
 -- NvimTree Git Icons
 
-
 Group.link("NvimTreeOpenedFolderName", g.Special)
-Group.link("NvimTreeFolderIcon", g.)
+Group.link("NvimTreeFolderIcon", g.Special)
 Group.link("NvimTreeFolderName", g.Normal)
 
 Group.link("NvimTreeGitDirty", g.Warning)
