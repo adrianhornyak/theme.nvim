@@ -89,8 +89,8 @@ Group.new("WildMenu", c.pink, c.base, s.none)
 Group.new("StatusLine", c.none, c.base, s.none)
 Group.new("StatusLineNC", c.black, c.white, s.none)
 
-Group.new("Visual", c.blue, c.base, s.none)
-Group.new("VisualNOS", c.blue, c.base, s.none)
+Group.new("Visual", g.Normal, c.blue_dark, s.none)
+Group.new("VisualNOS", g.Normal, c.blue_dark, s.none)
 
 Group.new("qffilename", g.Title, g.Title, g.Title)
 
@@ -184,34 +184,51 @@ Group.new("GitSignsAdd", c.green_light, c.none, s.none)
 Group.new("GitSignsChange", c.orange, c.none, s.none)
 Group.new("GitSignsDelete", c.red, c.none, s.none)
 
--- NvimTree Git Icons
+-----
 
+-- NvimTree & NvimTree Git
+
+-- folders
 Group.link("NvimTreeOpenedFolderName", g.Special)
 Group.link("NvimTreeFolderIcon", g.Special)
 Group.link("NvimTreeFolderName", g.Normal)
 Group.link("NvimTreeEmptyFolderName", g.Comment)
 
+-- git
+-- dirty
 Group.link("NvimTreeGitDirty", g.Warning)
-Group.link("NvimTreeGitStaged", g.TypeDef)
-Group.link("NvimTreeGitMerge", g.Error)
-Group.link("NvimTreeGitRenamed", g.Changed)
-Group.link("NvimTreeGitNew", g.String)
-Group.link("NvimTreeGitDeleted", g.Error)
-Group.link("NvimTreeGitIgnored", g.Comment) -- Telescope
-
+Group.link("NvimTreeGitFileDirtyHL", g.Normal)
 Group.link("NvimTreeGitFolderDirtyHL", g.Normal)
+
+-- staged
+Group.link("NvimTreeGitStaged", g.TypeDef)
+Group.link("NvimTreeGitFileStagedHL", g.Normal)
 Group.link("NvimTreeGitFolderStagedHL", g.Normal)
+
+-- merge
+Group.link("NvimTreeGitMerge", g.Error)
+Group.link("NvimTreeGitFileMergeHL", g.Normal)
 Group.link("NvimTreeGitFolderMergeHL", g.Normal)
+
+-- renamed
+Group.link("NvimTreeGitRenamed", g.Changed)
+Group.link("NvimTreeGitFileRenamedHL", g.Normal)
 Group.link("NvimTreeGitFolderRenamedHL", g.Normal)
+
+-- new
+Group.link("NvimTreeGitNew", g.String)
+Group.link("NvimTreeGitFileNewHL", g.Normal)
 Group.link("NvimTreeGitFolderNewHL", g.Normal)
+
+-- deleted
+Group.link("NvimTreeGitDeleted", g.Error)
+Group.link("NvimTreeGitFileDeletedHL", g.Normal)
 Group.link("NvimTreeGitFolderDeletedHL", g.Normal)
 
-Group.link("NvimTreeGitFileDirtyHL", g.Normal)
-Group.link("NvimTreeGitFileStagedHL", g.Normal)
-Group.link("NvimTreeGitFileMergeHL", g.Normal)
-Group.link("NvimTreeGitFileRenamedHL", g.Normal)
-Group.link("NvimTreeGitFileNewHL", g.Normal)
-Group.link("NvimTreeGitFileDeletedHL", g.Normal)
+-- ignored
+Group.link("NvimTreeGitIgnored", g.Comment) -- Telescope
+
+-----
 
 -- Telescope
 Group.link("TelescopeBorder", g.Noise)
