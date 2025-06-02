@@ -89,8 +89,8 @@ Group.new("WildMenu", c.pink, c.base, s.none)
 Group.new("StatusLine", c.none, c.base, s.none)
 Group.new("StatusLineNC", c.black, c.white, s.none)
 
-Group.new("Visual", g.Normal, g.NonText, s.none)
-Group.new("VisualNOS", g.Normal, g.NonText, s.none)
+Group.new("Visual", g.Normal, c.light_grey, s.none)
+Group.new("VisualNOS", g.Normal, c.light_grey, s.none)
 
 Group.new("qffilename", g.Title, g.Title, g.Title)
 
