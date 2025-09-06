@@ -1,23 +1,25 @@
-local colorbuddy = require("colorbuddy")
-local Color = colorbuddy.Color
+local c = {}
 
--- тёмная палитра
-local palette = {
-	{ keys = { "bg" }, gui = "#1c1c1c" },
-	{ keys = { "fg" }, gui = "#ffffff" },
-	{ keys = { "comment" }, gui = "#949494" },
-	{ keys = { "accent" }, gui = "#ff9e64" },
-}
+c.red_light = "#722529"
+c.red = "#d75f5f"
+c.orange = "#ff9e64"
+c.brown = "#af875f"
+c.brown_deep = "#875f5f"
+c.green_deep = "#1abc9c"
+c.green = "#9ece6a"
+c.green_light = "#a3e06e"
+c.blue_light = "#89ddff"
+c.blue = "#7dcfff"
+c.blue_dark = "#2ac3de"
+c.pink = "#EE5396"
+c.purple = "#bb9af7"
+c.white = "#ffffff"
+c.light_grey = "#bcbcbc"
+c.grey = "#949494"
+c.dark = "#767676"
+c.darker = "#585858"
+c.darkest = "#444444"
+c.base = "#1c1c1c"
+c.black = "#000000"
 
-for _, value in ipairs(palette) do
-	for _, key in ipairs(value.keys) do
-		Color.new(key, value.gui)
-	end
-end
-
-return {
-	background = "bg",
-	foreground = "fg",
-	comment = "comment",
-	accent = "accent",
-}
+return c

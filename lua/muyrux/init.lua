@@ -1,45 +1,144 @@
-local colorbuddy = require("colorbuddy")
-local Group = colorbuddy.Group
-local g = colorbuddy.groups
-local s = colorbuddy.styles
-local c = colorbuddy.colors
+local Color, colors, Group, groups, styles = require("colorbuddy.init").setup()
+local M = {}
+M.transparent = false
 
-local current_theme = "dark"
+local function apply_groups(c)
+	local bg = M.transparent and "NONE" or c.base
 
-local function apply_palette(palette)
-	Group.new("Normal", c[palette.foreground], c[palette.background], s.none)
-	Group.new("Comment", c[palette.comment], c[palette.background], s.italic)
-	Group.new("Error", c[palette.accent], c[palette.background], s.bold)
+	-- Editor Basics
+	Group.new("Normal", c.black, bg)
+	Group.new("Comment", c.dark, nil, styles.none)
+	Group.new("NonText", c.light_grey, nil)
+	Group.new("Error", c.red, nil)
+	Group.new("Number", c.blue_dark)
+	Group.new("Special", c.purple)
+	Group.new("String", c.green_deep)
+	Group.new("Title", c.blue)
+	Group.new("Todo", c.pink)
+	Group.new("Warning", c.orange)
 
-	Group.new("Visual", c.none, c[palette.comment], s.none)
-	Group.new("StatusLine", c[palette.foreground], c[palette.comment], s.none)
-	Group.new("StatusLineNC", c[palette.comment], c[palette.background], s.none)
+	-- User groups
+	Group.new("User1", c.pink)
+	Group.new("User2", c.blue)
+	Group.new("User3", c.pink)
+
+	-- Diff
+	Group.new("Added", groups.Normal, c.green)
+	Group.new("Changed", groups.Normal, c.blue_dark)
+	Group.new("Removed", groups.Normal, c.red_light)
+
+	-- Search
+	Group.new("MatchParen", groups.Normal, nil, styles.underline)
+	Group.new("CurSearch", c.pink, nil, styles.underline)
+	Group.new("IncSearch", c.pink)
+	Group.new("Search", c.pink)
+
+	-- Popup menus
+	Group.new("Pmenu", c.darker, bg)
+	Group.new("PmenuSel", c.grey, bg)
+	Group.new("PmenuThumb", c.brown)
+	Group.new("WildMenu", c.pink, bg)
+
+	-- Status/Visual
+	Group.new("StatusLine", nil, bg)
+	Group.new("StatusLineNC", c.black, bg)
+	Group.new("Visual", groups.Normal, c.light_grey)
+	Group.new("VisualNOS", groups.Normal, c.light_grey)
+
+	-- Spell
+	Group.new("SpellBad", c.red, nil, styles.undercurl)
+	Group.new("SpellCap", c.orange, nil, styles.undercurl)
+	Group.new("SpellLocal", c.brown, nil, styles.undercurl)
+	Group.new("SpellRare", c.blue, nil, styles.undercurl)
+
+	-- Diagnostics
+	Group.new("DiagnosticUnderlineError", nil, nil, styles.underline, c.red)
+	Group.new("DiagnosticUnderlineWarn", nil, nil, styles.underline, c.orange)
+	Group.new("DiagnosticUnderlineHint", nil, nil, styles.underline)
+	Group.new("DiagnosticUnderlineInfo", nil, nil, styles.underline)
+	Group.link("DiagnosticError", groups.Error)
+	Group.link("DiagnosticWarn", groups.Warning)
+	Group.link("DiagnosticHint", groups.Comment)
+	Group.link("DiagnosticInfo", groups.Comment)
+	Group.link("DiagnosticOk", groups.String)
+
+	-- GitSigns
+	Group.new("GitSignsAdd", c.green_light)
+	Group.new("GitSignsChange", c.orange)
+	Group.new("GitSignsDelete", c.red)
+
+	-- NvimTree
+	Group.link("NvimTreeOpenedFolderName", groups.Special)
+	Group.link("NvimTreeFolderIcon", groups.Special)
+	Group.link("NvimTreeFolderName", groups.Normal)
+	Group.link("NvimTreeEmptyFolderName", groups.Comment)
+	Group.link("NvimTreeGitDirty", groups.Warning)
+	Group.link("NvimTreeGitStaged", groups.User2)
+	Group.link("NvimTreeGitMerge", groups.Error)
+	Group.link("NvimTreeGitRenamed", groups.Changed)
+	Group.link("NvimTreeGitNew", groups.String)
+	Group.link("NvimTreeGitDeleted", groups.Error)
+	Group.link("NvimTreeGitIgnored", groups.Comment)
+
+	-- Telescope
+	Group.link("TelescopeBorder", groups.Noise)
+	Group.link("TelescopeMatching", groups.User1)
+	Group.link("TelescopePromptCounter", groups.Noise)
+
+	-- Markdown
+	Group.link("@markup.list.unchecked.markdown", groups.Error)
+	Group.link("@markup.list.checked.markdown", groups.Number)
+	Group.link("@markup.link.label.markdown_inline", groups.Special)
+	Group.link("@markup.link.url.markdown_inline", groups.Noise)
+
+	-- Fugitive
+	Group.link("fugitiveUnstagedModifier", groups.User2)
+	Group.link("fugitiveStagedHeading", groups.Warning)
+	Group.link("fugitiveUntrackedHeading", groups.User2)
+	Group.link("fugitiveUntrackedSection", groups.Noise)
+	Group.link("diffadded", groups.Added)
+	Group.link("diffremoved", groups.Removed)
+
+	-- Treesitter
+	Group.link("@type.builtin", groups.User3)
+	Group.link("@constant.builtin", groups.User1)
+	Group.link("@constructor", groups.Special)
+	Group.link("@exception.operator", groups.Special)
+	Group.link("@function.macro", groups.Normal)
+	Group.link("@namespace", groups.Normal)
+	Group.link("@punctuation.special", groups.Normal)
+	Group.link("@keyword.storage", groups.User2)
+	Group.link("@type.qualifier", groups.Normal)
+	Group.link("@variable", groups.Normal)
+	Group.link("@variable.builtin", groups.String)
 end
 
-local function set_theme(mode)
-	if mode == "dark" then
-		local palette = require("muyrux.palette_dark")
-		apply_palette(palette)
+function M.load(theme, transparent)
+	M.transparent = transparent or false
+	local palette
+	if theme == "dark" then
+		palette = require("plugins.muyrux.palette_dark")
 	else
-		local palette = require("muyrux.palette_light")
-		apply_palette(palette)
+		palette = require("plugins.muyrux.palette_light")
 	end
-	current_theme = mode
+
+	vim.g.colors_name = "muyrux"
+	apply_groups(palette)
 end
 
-function ToggleTheme()
-	if current_theme == "light" then
-		set_theme("dark")
-		print("🌑 Dark theme enabled")
+function M.toggle()
+	if vim.o.background == "dark" then
+		vim.o.background = "light"
+		M.load("light", M.transparent)
 	else
-		set_theme("light")
-		print("☀️ Light theme enabled")
+		vim.o.background = "dark"
+		M.load("dark", M.transparent)
 	end
 end
 
-vim.api.nvim_create_user_command("ToggleTheme", function()
-	ToggleTheme()
-end, {})
+function M.toggle_transparent()
+	M.transparent = not M.transparent
+	M.load(vim.o.background, M.transparent)
+end
 
--- включаем сразу тёмную
-set_theme("dark")
+return M

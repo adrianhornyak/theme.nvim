@@ -1,1 +1,1 @@
-require("muyrux")
+require("muyrux").load(vim.o.background)
