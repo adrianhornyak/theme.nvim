@@ -18,10 +18,10 @@ end
 
 local function set_theme(mode)
 	if mode == "dark" then
-		local palette = require("colors.muyrux.palette_dark")
+		local palette = require("muyrux.palette_dark")
 		apply_palette(palette)
 	else
-		local palette = require("colors.muyrux.palette_light")
+		local palette = require("muyrux.palette_light")
 		apply_palette(palette)
 	end
 	current_theme = mode
