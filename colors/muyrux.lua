@@ -1,1 +1,1 @@
-require("colors.muyrux")
+require("muyrux")
