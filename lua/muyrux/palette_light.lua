@@ -1,6 +1,3 @@
-local colorbuddy = require("colorbuddy")
-local Color = colorbuddy.Color
-
 -- светлая палитра
 local c = {}
 
