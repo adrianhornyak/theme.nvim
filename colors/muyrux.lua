@@ -1,7 +1,7 @@
 local M = {}
 
 M.config = function()
-	local muyrux = require("muyrux.init")
+	local muyrux = require("muyrux")
 	-- Автозагрузка темы при старте Neovim
 	muyrux.load(vim.o.background, false)
 
