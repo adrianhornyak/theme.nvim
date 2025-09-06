@@ -117,9 +117,9 @@ function M.load(theme, transparent)
 	M.transparent = transparent or false
 	local palette
 	if theme == "dark" then
-		palette = require("plugins.muyrux.palette_dark")
+		palette = require("muyrux.palette_dark")
 	else
-		palette = require("plugins.muyrux.palette_light")
+		palette = require("muyrux.palette_light")
 	end
 
 	vim.g.colors_name = "muyrux"
