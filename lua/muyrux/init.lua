@@ -1,5 +1,7 @@
 local Color, colors, Group, groups, styles = require("colorbuddy.init").setup()
 local M = {}
+
+-- Флаг прозрачного фона
 M.transparent = false
 
 local function apply_groups(c)
@@ -99,7 +101,7 @@ local function apply_groups(c)
 	Group.link("diffadded", groups.Added)
 	Group.link("diffremoved", groups.Removed)
 
-	-- Treesitter
+	-- Treesitter (пример)
 	Group.link("@type.builtin", groups.User3)
 	Group.link("@constant.builtin", groups.User1)
 	Group.link("@constructor", groups.Special)
